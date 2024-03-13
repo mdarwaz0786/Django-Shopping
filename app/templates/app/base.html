@@ -26,7 +26,7 @@
     <title>ShoppingX | {% block title %} {% endblock title %}</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-bg-secondary">
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="/">ShoppingKaro</a>
         <button
@@ -47,7 +47,7 @@
             </li>
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle text-white"
+                class="nav-link dropdown-toggle"
                 href="#"
                 id="electronicsDropdown"
                 role="button"
@@ -67,7 +67,7 @@
             </li>
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle text-white"
+                class="nav-link dropdown-toggle"
                 href="#"
                 id="fashionDropdown"
                 role="button"
@@ -89,7 +89,7 @@
               {% if request.user.is_authenticated %}
               <li class="nav-item dropdown mx-2">
                 <a
-                  class="nav-link dropdown-toggle text-white"
+                  class="nav-link dropdown-toggle"
                   href="#"
                   id="profileDropdown"
                   role="button"
@@ -115,27 +115,27 @@
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="{% url 'logout' %}"
+                    <a class="dropdown-item" href="{% url 'login' %}"
                       >Logout</a
                     >
                   </li>
                 </ul>
               </li>
               <li class="nav-item mx-2">
-                <a href="{% url 'showcart' %}" class="nav-link text-white"
+                <a href="{% url 'showcart' %}" class="nav-link"
                   ><span class="badge bg-danger">{{totalitem}}</span> Cart
                 </a>
               </li>
               {% else %}
               <li class="nav-item mx-2">
-                <a href="{% url 'login' %}" class="nav-link text-white"
+                <a href="{% url 'login' %}" class="nav-link"
                   >Login</a
                 >
               </li>
               <li class="nav-item mx-2">
                 <a
                   href="{% url 'customerregistration' %}"
-                  class="nav-link text-white"
+                  class="nav-link"
                   >Registration</a
                 >
               </li>
